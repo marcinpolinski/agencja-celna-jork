@@ -1,0 +1,21 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+
+# Source files (keep only final logo)
+logo.jpg
+logo.png
+unnamed.jpg
+*.odt
+CCF_003337.pdf
