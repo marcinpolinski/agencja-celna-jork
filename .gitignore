@@ -13,9 +13,11 @@ Thumbs.db
 *.tmp
 *.bak
 
-# Source files (keep only final logo)
+# Source files (keep only final logo and hero images)
 logo.jpg
 logo.png
 unnamed.jpg
 *.odt
 CCF_003337.pdf
+Messenger_creation_*.jpeg
+GITHUB_PAGES_SETUP.md
