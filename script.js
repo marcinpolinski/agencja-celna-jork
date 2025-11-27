@@ -1,3 +1,38 @@
+// Hero Image Carousel
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slide');
+const indicators = document.querySelectorAll('.indicator');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+    // Remove active class from all slides and indicators
+    slides.forEach(slide => slide.classList.remove('active'));
+    indicators.forEach(ind => ind.classList.remove('active'));
+
+    // Add active class to current slide and indicator
+    slides[index].classList.add('active');
+    indicators[index].classList.add('active');
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+}
+
+// Auto-advance carousel every 5 seconds
+let carouselInterval = setInterval(nextSlide, 5000);
+
+// Manual navigation with indicators
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        currentSlide = index;
+        showSlide(currentSlide);
+        // Reset interval when manually changing slides
+        clearInterval(carouselInterval);
+        carouselInterval = setInterval(nextSlide, 5000);
+    });
+});
+
 // Mobile Menu Toggle
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const navMenu = document.getElementById('navMenu');
